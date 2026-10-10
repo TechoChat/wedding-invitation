@@ -21,8 +21,8 @@ const cinzel = Cinzel({
 });
 
 export const metadata: Metadata = {
-  title: "Utsav & Devanshi — Shubh Vivah",
-  description: "We invite you to celebrate the auspicious union of Utsav and Devanshi. Join us for our wedding festivities.",
+  title: "Utsav & Devanshi | A Timeless Union",
+  description: "Two family invitations for the Gujarati Hindu wedding celebrations of Utsav Shah and Devanshi Sutaria.",
 };
 
 export const viewport: Viewport = {

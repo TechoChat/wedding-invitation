@@ -230,7 +230,7 @@ export default function ScratchToReveal() {
     const percentage = Math.round((transparentPixels / checkedCount) * 100);
     setScratchPercentage(percentage);
 
-    if (percentage > 40 && !isRevealed) {
+    if (percentage > 2 && !isRevealed) {
       setIsRevealed(true);
       triggerFullScreenConfetti();
     }
@@ -309,7 +309,7 @@ export default function ScratchToReveal() {
 
         {/* Traditional Dates Layout */}
         <h3 className="text-xl sm:text-2xl font-display-wedding text-maroon-800 font-bold leading-tight mt-0.5">
-          13th, 14th & 15th Feb 2027
+          14th & 15th Feb 2027
         </h3>
         
         <p className="text-[11px] font-serif-wedding text-charcoal-wedding/80 mt-1.5 uppercase tracking-widest font-bold border-t border-gold-500/30 pt-1.5 px-6">

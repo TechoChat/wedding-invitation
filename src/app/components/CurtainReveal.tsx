@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
 
 interface CurtainRevealProps {
   onComplete?: () => void;
@@ -13,6 +12,8 @@ export default function CurtainReveal({ onComplete }: CurtainRevealProps) {
   const [isFinished, setIsFinished] = useState(false);
 
   useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
     // Start the transition sequence shortly after mount
     const startTimeout = setTimeout(() => {
       setIsStarted(true);
@@ -21,12 +22,14 @@ export default function CurtainReveal({ onComplete }: CurtainRevealProps) {
     // End the animation and unmount/disable overlay after curtains finish parting
     const endTimeout = setTimeout(() => {
       setIsFinished(true);
+      document.body.style.overflow = previousOverflow;
       if (onComplete) onComplete();
-    }, 5100); // 3.5s start delay + 0.4s text fade + 1.2s slide open = 5.1s
+    }, 5300); // 3.5s hold + 0.4s transition delay + 1.4s curtain slide
 
     return () => {
       clearTimeout(startTimeout);
       clearTimeout(endTimeout);
+      document.body.style.overflow = previousOverflow;
     };
   }, [onComplete]);
 

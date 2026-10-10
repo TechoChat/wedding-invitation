@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Devanshi & Utsav Wedding Invitation
 
-## Getting Started
+A Next.js wedding invitation site with a dedicated animated invitation for Devanshi Sutaria.
 
-First, run the development server:
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000/devanshi` to view Devanshi's invitation.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Responsive wedding landing page with animated typography and couple photograph.
+- Scratch-to-reveal golden invitation panel with a confetti burst when revealed.
+- Background music using `public/background-sound.mp3`, with a user-controlled play/pause button and a soft 14% volume setting. Browsers require a user gesture before audio playback.
+- Ceremony cards and a Google Maps directions link.
+- No RSVP or attendance form.
 
-## Learn More
+## Invitation details
 
-To learn more about Next.js, take a look at the following resources:
+**Date:** Monday, 15 February 2027  
+**Venue:** Surat Leva Patel Vadi, Bardoli, Gujarat  
+**Haldi:** 8:00 AM, *Turmeric Tales*  
+**Ganesh Sthapana:** 9:00 AM  
+**Lagan:** 5:00 PM, *A Timeless Union*  
+**Directions:** https://maps.app.goo.gl/M7wDB5sBMcZT3XeZ8
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Scratch card update
+The scratch foil is initialized after the card has been laid out. The hidden content now shows only the date (15 February 2027); ceremony details remain in the page below. Scratching over 40% of the gold layer triggers the reveal and confetti.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Latest update: scratch reveal threshold is set to approximately 2% on both invitations. The wax-seal image has been removed from the curtain overlay.
